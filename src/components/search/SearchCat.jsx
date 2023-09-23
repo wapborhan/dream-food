@@ -1,4 +1,8 @@
-const SearchCat = () => {
+const SearchCat = ({ categories }) => {
+  console.log(categories);
+  // const cat = categories.map((item) => {
+  //   return item;
+  // });
   return (
     <select
       required
@@ -7,7 +11,7 @@ const SearchCat = () => {
       <option value="" disabled selected>
         Select a option
       </option>
-      <option value="option1">HTML</option>
+      <option value={categories}>{categories}</option>
       <option value="option2">JavaScript</option>
       <option value="option3">Tailwind CSS</option>
     </select>

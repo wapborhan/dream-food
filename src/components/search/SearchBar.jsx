@@ -15,7 +15,7 @@ const SearchBar = () => {
     fetch(catUrl)
       .then((res) => res.json())
       .then((data) => {
-        let categories = data.map((cat) => {
+        let categories = data.meals.map((cat) => {
           return cat["strCategory"];
         });
         setCategories(categories);
@@ -24,7 +24,7 @@ const SearchBar = () => {
     fetch(AreaUrl)
       .then((res) => res.json())
       .then((data) => {
-        let area = data.map((cat) => {
+        let area = data.meals.map((cat) => {
           return cat["strArea"];
         });
         setArea(area);
